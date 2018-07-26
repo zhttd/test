@@ -1,0 +1,9 @@
+from googletrans import Translator
+translator = Translator()
+#print translator.translate('今天天气不错').text
+#print translator.translate('今天天气不错', dest='ja').text
+#print translator.translate('今天天气不错', dest='ko').text
+
+translations = translator.translate(['today is monday', 'today is tuesday', 'the lazy dog'], dest='zh-cn')
+for translation in translations:
+    print(translation.origin, ' -> ', translation.text)
